@@ -1,11 +1,8 @@
 <template>
 <div class="main-block">
-  <h3>Бобро дожаловать</h3>
-  <div class="discription">
-    <p>длинное и не нужное описание сайта</p>
-  </div>
-  <div>
-    <button class="button big-button"> BIG BUTTON перейти к заказу документов</button>
+  <h3>Новости</h3>
+  <div class="news-main-block">
+
   </div>
 </div>
 </template>
@@ -18,8 +15,5 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/css/main.scss";
-.big-button {
-  width: 400px;
-  height: 200px;
-}
+
 </style>
