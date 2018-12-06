@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div class="nav-bar">
+    <router-link to="/Main">
       <button class="nav-bar-button">Главная</button>
+    </router-link>
+    <router-link to="/Documents">
       <button class="nav-bar-button">Документы</button>
+    </router-link>
+    <router-link to="/Order">
       <button class="nav-bar-button">Подать заявку</button>
+    </router-link>
     </div>
     <div class="content">
       <router-view/>
@@ -46,7 +52,7 @@ $color-second: #020080;
   background-color: $color-second;
 }
 .content {
-  padding: 20px;
+  padding: 40px;
   text-align: left;
 }
 </style>
