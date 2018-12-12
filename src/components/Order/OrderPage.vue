@@ -20,12 +20,16 @@
           <label for="dynamic-label-input">Отчество</label>
         </div>
       </div>
-      <button class="button order-button" @click="sendData()">Далее</button>
+      <div class="inputs-block">
+        in
+      </div>
+      <button class="button order-button" @click="goNext()">Далее</button>
     </div>
   </div>
 </template>
 
 <script>
+import orderStore from './orderStore'
 export default {
   data () {
     return {
@@ -34,14 +38,11 @@ export default {
       userSecondName: ''
     }
   },
+  computed: {
+  },
   methods: {
-    sendData () {
-      let userData = {
-        firstName: this.userFirstName,
-        secondName: this.userSecondName,
-        lastName: this.lastName
-      }
-      console.log(JSON.stringify(userData))
+    goNext () {
+
     }
   }
 }
