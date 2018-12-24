@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import MainPage from '../components/MainPage'
 import DocumentsPage from '../components/Documents'
 import OrderPage from '../components/Order/OrderPage'
+import OrderPage2 from '../components/Order/OrderPage2'
 
 Vue.use(Router)
 
@@ -22,9 +23,15 @@ export default new Router({
     },
     {
       path: '/Order',
-      name: 'Order',
+      name: 'OrderPage1',
       title: 'Заявка',
       component: OrderPage
+    },
+    {
+      path: '/Order2',
+      name: 'OrderPage2',
+      title: 'Заявка',
+      component: OrderPage2
     }
   ]
 })

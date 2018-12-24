@@ -28,12 +28,10 @@ export default {
 
 <style scoped lang="scss">
 @import "./assets/css/main.scss";
-$color-first: #004080;
-$color-second: #020080;
 .nav-bar {
   width: 100%;
   height: 50px;
-  z-index: 100;
+  z-index: 99999;
   background-color: $color-first;
   margin: 0;
   padding: 0 10px;

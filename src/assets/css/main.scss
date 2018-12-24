@@ -1,11 +1,26 @@
+$color-first: #004080;
+$color-second: #020080;
+
 .button {
-  width: 70px;
-  height: 30px;
   border-radius: 4px;
+  font-size: 12pt;
+  font-weight: 600;
   margin: 5px;
-  padding: 5px;
+  padding: 9px 13px;
   border-width: 0;
   outline: none;
+}
+
+.button-primary {
+  background-color: $color-second;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+.button-disabled {
+  background-color: gray;
+  cursor: default;
 }
 
 .input {

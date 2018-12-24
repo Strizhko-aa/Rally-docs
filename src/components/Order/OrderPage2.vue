@@ -4,20 +4,50 @@
     <div class="order-main-block">
       <div class="inputs-block">
         <div class="form-group fix-form-group">
-          <input class="input" v-model="userSecondName" type="text" id="dynamic-label-input" placeholder="Фамилия">
-          <label for="dynamic-label-input">Фамилия</label>
+          <input class="input" v-model="userMark" type="text" id="dynamic-label-input" placeholder="Марка">
+          <label for="dynamic-label-input">Марка</label>
         </div>
       </div>
       <div class="inputs-block">
         <div class="form-group fix-form-group">
-          <input class="input" v-model="userFirstName" type="text" id="dynamic-label-input" placeholder="Имя">
-          <label for="dynamic-label-input">Имя</label>
+          <input class="input" v-model="userModel" type="text" id="dynamic-label-input" placeholder="Модель">
+          <label for="dynamic-label-input">Модель</label>
         </div>
       </div>
       <div class="inputs-block">
         <div class="form-group fix-form-group">
-          <input class="input" v-model="userLastName" type="text" id="dynamic-label-input" placeholder="Отчество">
-          <label for="dynamic-label-input">Отчество</label>
+          <input class="input" v-model="userBodyNumber" type="text" id="dynamic-label-input" placeholder="Шасси(кузов)№">
+          <label for="dynamic-label-input">Шасси(кузов)№</label>
+        </div>
+      </div>
+      <div class="inputs-block">
+        <div class="form-group fix-form-group">
+          <input class="input" v-model="userBodyYear" type="text" id="dynamic-label-input" placeholder="Год выпуска шасси(кузова)">
+          <label for="dynamic-label-input">Год выпуска шасси(кузова)</label>
+        </div>
+      </div>
+      <div class="inputs-block">
+        <div class="form-group fix-form-group">
+          <input class="input" v-model="userEngineModel" type="text" id="dynamic-label-input" placeholder="Модель двигателя">
+          <label for="dynamic-label-input">Модель двигателя</label>
+        </div>
+      </div>
+      <div class="inputs-block">
+        <div class="form-group fix-form-group">
+          <input class="input" v-model="userEngineYear" type="text" id="dynamic-label-input" placeholder="Год выпуска двигателя">
+          <label for="dynamic-label-input">Год выпуска двигателя</label>
+        </div>
+      </div>
+      <div class="inputs-block">
+        <div class="form-group fix-form-group">
+          <input class="input" v-model="userOmologNumber" type="text" id="dynamic-label-input" placeholder="Омологационный номер ФИА РАФ">
+          <label for="dynamic-label-input">Омологационный номер ФИА РАФ</label>
+        </div>
+      </div>
+      <div class="inputs-block">
+        <div class="form-group fix-form-group">
+          <input class="input" v-model="userCyclinderVolume" type="text" id="dynamic-label-input" placeholder="Номинальноый объем цилиндров (см3)">
+          <label for="dynamic-label-input">Омологационный номер ФИА РАФ</label>
         </div>
       </div>
       <div class="inputs-block fix-overlay">
@@ -26,7 +56,7 @@
         </div>
         <div class="input-select-item" v-if="showCategoryFlag" @click="selectCategory(item)" v-for="item in categories" v-bind:key="item">{{ item }}</div>
       </div>
-      <button class="button order-button" v-bind:class="{'button-primary': checkAllInputsFlag, 'button-disabled': !checkAllInputsFlag}" v-bind:disabled="!checkAllInputsFlag" @click="goNext()">Далее</button>
+      <button class="button order-button" v-bind:class="{'button-primary': checkAllInputsFlag, 'button-disabled': !checkAllInputsFlag}" v-bind:disabled="checkAllInputsFlag" @click="goNext()">Далее</button>
     </div>
 
     <!-- <div class="input-select-item-overlay" v-if="showCategoryFlag" @click="showCategory()"></div> -->
@@ -68,8 +98,6 @@ export default {
       orderStore.state.secondName = this.userSecondName
       orderStore.state.lastName = this.userLastName
       orderStore.state.category = this.selectedCategory
-      console.log('in mrth')
-      this.$router.push({path: '/Order2'})
     },
     setValue (val) {
       console.log(val)
